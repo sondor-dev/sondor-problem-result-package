@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <Title>Sondor.ProblemResults</Title>
+    <Authors>Sondor Technology</Authors>
+    <Company>Sondor Technology</Company>
+    <Description>The Sondor problem result package, sets up common base problem detail results used for building APIs and services. It supports both the legacy method of throwing custom exceptions and the result pattern to ensure a consistent but performant problem detail implementation.</Description>
+    <Copyright>LICENSE</Copyright>
+    <PackageProjectUrl>https://github.com/sondor-dev/sondor-problem-result-package</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/sondor-dev/sondor-problem-result-package</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Sondor;Problem Details;Result;Result Pattern</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>sondor-technology-logo.jpg</PackageIcon>
+    <PackageReleaseNotes>The initial release.</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>$(AssemblyName).Tests</_Parameter1>
+    </AssemblyAttribute>
+    <PackageReference Include="Sondor.Translations" Version="1.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Translations.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="sondor-technology-logo.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

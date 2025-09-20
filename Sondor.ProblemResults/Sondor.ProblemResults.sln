@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36511.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sondor.ProblemResults", "Sondor.ProblemResults\Sondor.ProblemResults.csproj", "{63B1E9AB-267E-E308-D998-FE81138D38C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sondor.ProblemResults.Tests", "Sondor.ProblemResults.Tests\Sondor.ProblemResults.Tests.csproj", "{3F3464DA-A759-D91F-3DED-341BCDBEB2DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63B1E9AB-267E-E308-D998-FE81138D38C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B1E9AB-267E-E308-D998-FE81138D38C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B1E9AB-267E-E308-D998-FE81138D38C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B1E9AB-267E-E308-D998-FE81138D38C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F3464DA-A759-D91F-3DED-341BCDBEB2DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F3464DA-A759-D91F-3DED-341BCDBEB2DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F3464DA-A759-D91F-3DED-341BCDBEB2DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F3464DA-A759-D91F-3DED-341BCDBEB2DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5C1E9B2-582A-4760-A2E1-125DD4494240}
+	EndGlobalSection
+EndGlobal
