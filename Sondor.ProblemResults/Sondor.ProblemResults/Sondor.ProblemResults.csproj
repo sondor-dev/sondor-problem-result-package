@@ -22,7 +22,7 @@
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
       <_Parameter1>$(AssemblyName).Tests</_Parameter1>
     </AssemblyAttribute>
-    <PackageReference Include="Sondor.Translations" Version="1.0.9" />
+    <PackageReference Include="Sondor.Translations" Version="1.0.10" />
   </ItemGroup>
 
   <ItemGroup>

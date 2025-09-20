@@ -1,13 +1,14 @@
-﻿namespace Sondor.ProblemResults.Constants;
+﻿using Sondor.Errors;
+using Sondor.Errors.Exceptions;
+
+namespace Sondor.ProblemResults.Constants;
 
 /// <summary>
 /// Collection of problem result constants.
 /// </summary>
-internal class ProblemResultConstants
+public class ProblemResultConstants
 {
     public const string TraceKey = "traceId";
-    public const string Identifier = "identifier";
-    public const string IdentifierValue = "identifier-value";
     public const string ConflictType = "https://support.sondor-technology.co.uk/problems/conflict";
     public const string ForbiddenType = "https://support.sondor-technology.co.uk/problems/forbidden";
     public const string BadRequestType = "https://support.sondor-technology.co.uk/problems/bad-request";
@@ -69,4 +70,30 @@ internal class ProblemResultConstants
     /// The updated resource extension key.
     /// </summary>
     public const string UpdatedResource = "updated-resource";
+
+    /// <summary>
+    /// Find problem type by error code.
+    /// </summary>
+    /// <param name="errorCode">The error code.</param>
+    /// <returns>Returns the appropriate problem result type.</returns>
+    /// <exception cref="UnsupportedErrorCodeException">This exception is thrown when an unsupported error code is provided.</exception>
+    public static string FindProblemTypeByErrorCode(int errorCode)
+    {
+        return errorCode switch
+        {
+            SondorErrorCodes.BadRequest => BadRequestType,
+            SondorErrorCodes.ResourceAlreadyExists => ConflictType,
+            SondorErrorCodes.Forbidden => ForbiddenType,
+            SondorErrorCodes.Unauthorized => UnauthorizedType,
+            SondorErrorCodes.TaskCancelled => RequestCancelledType,
+            SondorErrorCodes.ResourceNotFound => ResourceNotFoundType,
+            SondorErrorCodes.ResourcePatchFailed => ResourcePatchFailedType,
+            SondorErrorCodes.ResourceDeleteFailed => ResourceDeleteFailedType,
+            SondorErrorCodes.ResourceUpdateFailed => ResourceUpdateFailedType,
+            SondorErrorCodes.ResourceCreateFailed => ResourceCreateFailedType,
+            SondorErrorCodes.UnexpectedError => UnexpectedErrorType,
+            SondorErrorCodes.ValidationFailed => BadRequestType,
+            _ => throw new UnsupportedErrorCodeException(errorCode)
+        };
+    }
 }
