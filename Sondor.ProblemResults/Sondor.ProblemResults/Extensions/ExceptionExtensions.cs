@@ -267,7 +267,8 @@ public static class ExceptionExtensions
 
         return context.UnauthorizedProblem(title,
             detail,
-            exception.Message);
+            exception.Message,
+            context.GetInstance());
     }
 
     /// <summary>

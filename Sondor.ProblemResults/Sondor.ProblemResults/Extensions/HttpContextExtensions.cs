@@ -384,11 +384,13 @@ public static class HttpContextExtensions
     /// <param name="title">The title.</param>
     /// <param name="detail">The detail.</param>
     /// <param name="errorMessage">The error message.</param>
+    /// <param name="resource">The resource.</param>
     /// <returns>Returns the problem.</returns>
     public static SondorProblemDetails UnauthorizedProblem(this HttpContext context,
         string title,
         string detail,
-        string errorMessage)
+        string errorMessage,
+        string resource)
     {
         return new SondorProblemDetails
         {

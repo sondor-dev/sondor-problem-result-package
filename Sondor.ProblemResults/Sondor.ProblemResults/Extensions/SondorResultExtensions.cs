@@ -113,7 +113,8 @@ public static class SondorResultExtensions
             SondorErrorCodes.Unauthorized => context.UnauthorizedProblem(
                 translationManager.ProblemUnauthorizedTitle(),
                 translationManager.ProblemUnauthorized(resource),
-                result.Error.Value.ErrorDescription),
+                result.Error.Value.ErrorDescription,
+                resource),
             SondorErrorCodes.ValidationFailed => context.ValidationProblem(
                 translationManager.ProblemValidationErrorsTitle(),
                 translationManager.ProblemValidationErrors(errors.Length),
