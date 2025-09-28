@@ -539,7 +539,7 @@ public class SondorResultExtensionsTests
                 {
                     { ProblemResultConstants.TraceKey, context.TraceIdentifier },
                     { ProblemResultConstants.ErrorCode, SondorErrorCodes.Unauthorized },
-                    { ProblemResultConstants.Resource, context.GetInstance() },
+                    { ProblemResultConstants.Resource, resource },
                     { ProblemResultConstants.ErrorMessage, _translationManager.ProblemUnauthorized(resource) }
                 }
             },

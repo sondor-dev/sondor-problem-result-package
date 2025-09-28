@@ -404,7 +404,7 @@ public static class HttpContextExtensions
                 { ProblemResultConstants.TraceKey, context.TraceIdentifier },
                 { ProblemResultConstants.ErrorMessage, errorMessage },
                 { ProblemResultConstants.ErrorCode, SondorErrorCodes.Unauthorized },
-                { ProblemResultConstants.Resource, context.GetInstance() }
+                { ProblemResultConstants.Resource, resource }
             }
         };
     }
