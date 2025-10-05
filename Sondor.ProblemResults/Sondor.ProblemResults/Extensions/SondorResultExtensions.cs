@@ -50,20 +50,10 @@ public static class SondorResultExtensions
 
         return result.Error.Value.ErrorCode switch
         {
-            SondorErrorCodes.BadRequest => new SondorProblemDetails
-            {
-                Type = ProblemResultConstants.BadRequestType,
-                Title = translationManager.ProblemBadRequestTitle(),
-                Status = StatusCodes.Status400BadRequest,
-                Detail = translationManager.ProblemBadRequest(context.Request.Method, context.Request.Path),
-                Instance = context.GetInstance(),
-                Extensions =
-                {
-                    { ProblemResultConstants.TraceKey, context.TraceIdentifier },
-                    { ProblemResultConstants.ErrorCode, SondorErrorCodes.BadRequest },
-                    { ProblemResultConstants.ErrorMessage, result.Error.Value.ErrorDescription }
-                }
-            },
+            SondorErrorCodes.BadRequest => context.BadRequestProblem(
+                translationManager.ProblemBadRequestTitle(),
+                translationManager.ProblemBadRequest(context.Request.Method, context.Request.Path),
+                result.Error.Value.ErrorDescription),
             SondorErrorCodes.Forbidden => context.ForbiddenProblem(
                 translationManager.ProblemForbiddenTitle(),
                 translationManager.ProblemForbidden(),

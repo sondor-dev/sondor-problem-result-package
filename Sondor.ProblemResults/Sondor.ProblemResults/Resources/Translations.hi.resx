@@ -165,6 +165,12 @@
   <data name="RESOURCE_UPDATE_FAILED_TITLE" xml:space="preserve">
     <value>संसाधन अद्यतन विफल!</value>
   </data>
+  <data name="SERVER_NOT_FOUND" xml:space="preserve">
+    <value>दुर्भाग्यवश, '{0}' सर्वर नहीं मिल सका.</value>
+  </data>
+  <data name="SERVER_NOT_FOUND_TITLE" xml:space="preserve">
+    <value>सर्वर नहीं मिल रहा!</value>
+  </data>
   <data name="TASK_CANCELLED" xml:space="preserve">
     <value>दुर्भाग्यवश, '{0}' कार्य रद्द कर दिया गया है.</value>
   </data>

@@ -124,4 +124,14 @@ internal class TranslationDefaultConstants
     /// The task cancelled title translation default.
     /// </summary>
     public const string TaskCancelledTitle = "Task cancelled!";
+
+    /// <summary>
+    /// The server not found translation default.
+    /// </summary>
+    public const string ServerNotFound = "Unfortunately, the '{0}' server could not be found.";
+
+    /// <summary>
+    /// The server not found title translation default.
+    /// </summary>
+    public const string ServerNotFoundTitle = "Server not found!";
 }

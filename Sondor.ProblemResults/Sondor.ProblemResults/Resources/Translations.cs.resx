@@ -165,6 +165,12 @@
   <data name="RESOURCE_UPDATE_FAILED_TITLE" xml:space="preserve">
     <value>Aktualizace zdroje se nezdařila!</value>
   </data>
+  <data name="SERVER_NOT_FOUND" xml:space="preserve">
+    <value>Server '{0}' bohužel nebyl nalezen.</value>
+  </data>
+  <data name="SERVER_NOT_FOUND_TITLE" xml:space="preserve">
+    <value>Server nenalezen!</value>
+  </data>
   <data name="TASK_CANCELLED" xml:space="preserve">
     <value>Úkol '{0}' byl bohužel zrušen.</value>
   </data>

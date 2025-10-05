@@ -438,4 +438,33 @@ public static class HttpContextExtensions
             }
         };
     }
+    
+    /// <summary>
+    /// Bad request problem.
+    /// </summary>
+    /// <param name="context">The context.</param>
+    /// <param name="title">The title.</param>
+    /// <param name="detail">The detail.</param>
+    /// <param name="errorMessage">The error message.</param>
+    /// <returns>Returns the details.</returns>
+    public static SondorProblemDetails BadRequestProblem(this HttpContext context,
+        string title,
+        string detail,
+        string errorMessage)
+    {
+        return new SondorProblemDetails
+        {
+            Type = ProblemResultConstants.BadRequestType,
+            Title = title,
+            Status = StatusCodes.Status400BadRequest,
+            Detail = detail,
+            Instance = context.GetInstance(),
+            Extensions =
+            {
+                { ProblemResultConstants.TraceKey, context.TraceIdentifier },
+                { ProblemResultConstants.ErrorCode, SondorErrorCodes.BadRequest },
+                { ProblemResultConstants.ErrorMessage, errorMessage }
+            }
+        };
+    }
 }

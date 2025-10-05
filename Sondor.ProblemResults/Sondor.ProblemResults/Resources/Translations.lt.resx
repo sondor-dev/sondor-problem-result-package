@@ -165,6 +165,12 @@
   <data name="RESOURCE_UPDATE_FAILED_TITLE" xml:space="preserve">
     <value>Nepavyko atnaujinti išteklių!</value>
   </data>
+  <data name="SERVER_NOT_FOUND" xml:space="preserve">
+    <value>Deja, nepavyko rasti serverio „{0}“.</value>
+  </data>
+  <data name="SERVER_NOT_FOUND_TITLE" xml:space="preserve">
+    <value>Serveris nerastas!</value>
+  </data>
   <data name="TASK_CANCELLED" xml:space="preserve">
     <value>Deja, užduotis „{0}“ buvo atšaukta.</value>
   </data>

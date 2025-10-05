@@ -873,4 +873,52 @@ public class SondorTranslationManagerExtensionsTests
 
         Assert.That(result, Is.Not.EqualTo(defaultTranslation));
     }
+
+    /// <summary>
+    /// Ensures that <see cref="SondorTranslationManagerExtensions.ProblemTaskCancelled"/> returns the correct translation for a valid path.
+    /// </summary>
+    [Test]
+    public void ServerNotFound_ShouldReturnTranslation()
+    {
+        // arrange
+        const string uri = "uri";
+        var defaultTranslation =
+            string.Format(TranslationDefaultConstants.ServerNotFound, uri);
+
+        // act
+        var result = _translationManager.ServerNotFound(uri);
+
+        // assert
+        if (_language.Equals("en"))
+        {
+            Assert.That(result, Is.EqualTo(defaultTranslation));
+
+            return;
+        }
+
+        Assert.That(result, Is.Not.EqualTo(defaultTranslation));
+    }
+
+    /// <summary>
+    /// Ensures that <see cref="SondorTranslationManagerExtensions.ServerNotFoundTitle"/> returns the correct translation.
+    /// </summary>
+    [Test]
+    public void ServerNotFoundTitle_ShouldReturnTranslation()
+    {
+        // arrange
+        const string defaultTranslation = TranslationDefaultConstants.ServerNotFoundTitle;
+
+        // act
+        var result = _translationManager.ServerNotFoundTitle();
+
+        // assert
+        if (_language.Equals("en"))
+        {
+            Assert.That(result, Is.EqualTo(defaultTranslation));
+
+            return;
+        }
+
+        Assert.That(result, Is.Not.EqualTo(defaultTranslation));
+    }
 }

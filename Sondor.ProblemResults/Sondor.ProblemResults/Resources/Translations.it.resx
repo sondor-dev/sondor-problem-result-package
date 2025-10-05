@@ -165,6 +165,12 @@
   <data name="RESOURCE_UPDATE_FAILED_TITLE" xml:space="preserve">
     <value>Aggiornamento delle risorse non riuscito!</value>
   </data>
+  <data name="SERVER_NOT_FOUND" xml:space="preserve">
+    <value>Purtroppo non è stato possibile trovare il server '{0}'.</value>
+  </data>
+  <data name="SERVER_NOT_FOUND_TITLE" xml:space="preserve">
+    <value>Server non trovato!</value>
+  </data>
   <data name="TASK_CANCELLED" xml:space="preserve">
     <value>Purtroppo l'attività '{0}' è stata annullata.</value>
   </data>

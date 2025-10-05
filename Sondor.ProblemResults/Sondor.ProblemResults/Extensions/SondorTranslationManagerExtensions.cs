@@ -389,4 +389,27 @@ public static class SondorTranslationManagerExtensions
     {
         return translationManager.ProblemResultTranslation(SondorProblemResultTranslations.TaskCancelledTitle);
     }
+
+    /// <summary>
+    /// Server not found.
+    /// </summary>
+    /// <param name="uri">The URI.</param>
+    /// <param name="translationManager">The translation manager.</param>
+    /// <returns>Returns the translation.</returns>
+    public static string ServerNotFound(this ISondorTranslationManager translationManager,
+        string uri)
+    {
+        return translationManager.ProblemResultTranslation(SondorProblemResultTranslations.ServerNotFound,
+            uri);
+    }
+
+    /// <summary>
+    /// Server not found title.
+    /// </summary>
+    /// <param name="translationManager">The translation manager.</param>
+    /// <returns>Returns the translation.</returns>
+    public static string ServerNotFoundTitle(this ISondorTranslationManager translationManager)
+    {
+        return translationManager.ProblemResultTranslation(SondorProblemResultTranslations.ServerNotFoundTitle);
+    }
 }

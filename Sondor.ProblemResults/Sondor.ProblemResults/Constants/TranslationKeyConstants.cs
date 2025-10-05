@@ -124,4 +124,14 @@ internal class TranslationKeyConstants
     /// The task cancelled title translation key.
     /// </summary>
     public const string ProblemTaskCancelledTitle = "TASK_CANCELLED_TITLE";
+    
+    /// <summary>
+    /// The server not found translation key.
+    /// </summary>
+    public const string ServerNotFound = "SERVER_NOT_FOUND";
+
+    /// <summary>
+    /// The server not found title translation key.
+    /// </summary>
+    public const string ServerNotFoundTitle = "SERVER_NOT_FOUND_TITLE";
 }

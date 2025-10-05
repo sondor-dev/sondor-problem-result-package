@@ -165,6 +165,12 @@
   <data name="RESOURCE_UPDATE_FAILED_TITLE" xml:space="preserve">
     <value>Wedi methu diweddaru adnoddau!</value>
   </data>
+  <data name="SERVER_NOT_FOUND" xml:space="preserve">
+    <value>Yn anffodus, ni ellid dod o hyd i'r gweinydd '{0}'.</value>
+  </data>
+  <data name="SERVER_NOT_FOUND_TITLE" xml:space="preserve">
+    <value>Heb ganfod y gweinydd!</value>
+  </data>
   <data name="TASK_CANCELLED" xml:space="preserve">
     <value>Yn anffodus, mae'r dasg '{0}' wedi'i chanslo.</value>
   </data>

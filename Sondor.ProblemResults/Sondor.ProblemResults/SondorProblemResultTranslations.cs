@@ -180,4 +180,18 @@ public enum SondorProblemResultTranslations
     [TranslationKey(TranslationKeyConstants.ProblemTaskCancelledTitle)]
     [TranslationDefault(TranslationDefaultConstants.TaskCancelledTitle)]
     TaskCancelledTitle = 24,
+
+    /// <summary>
+    /// The server not found title translation.
+    /// </summary>
+    [TranslationKey(TranslationKeyConstants.ServerNotFound)]
+    [TranslationDefault(TranslationDefaultConstants.ServerNotFound)]
+    ServerNotFound = 25,
+
+    /// <summary>
+    /// The server not found title translation.
+    /// </summary>
+    [TranslationKey(TranslationKeyConstants.ServerNotFoundTitle)]
+    [TranslationDefault(TranslationDefaultConstants.ServerNotFoundTitle)]
+    ServerNotFoundTitle = 26
 }
