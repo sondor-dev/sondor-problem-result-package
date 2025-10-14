@@ -47,13 +47,14 @@ public static class SondorResultExtensions
         var reasons = result.Error.Value.Context.TryGetValue(ProblemResultConstants.Reasons, out var reasonsValue) ? (IEnumerable<string>?)reasonsValue ?? [] : [];
         var patches = result.Error.Value.Context.TryGetValue(ProblemResultConstants.Patches, out var patchesValue) ? (IDictionary<string, string?>?)patchesValue ?? new Dictionary<string, string?>() : new Dictionary<string, string?>();
         var updatedResource = result.Error.Value.Context.TryGetValue(ProblemResultConstants.UpdatedResource, out var updatedValue) ? updatedValue : null;
+        var errorMessage = result.Error.Value.Context.TryGetValue(ProblemResultConstants.ErrorMessage, out var errorMessageValue) ?  errorMessageValue?.ToString() ?? string.Empty : string.Empty;
 
         return result.Error.Value.ErrorCode switch
         {
             SondorErrorCodes.BadRequest => context.BadRequestProblem(
                 translationManager.ProblemBadRequestTitle(),
                 translationManager.ProblemBadRequest(context.Request.Method, context.Request.Path),
-                result.Error.Value.ErrorDescription),
+                errorMessage),
             SondorErrorCodes.Forbidden => context.ForbiddenProblem(
                 translationManager.ProblemForbiddenTitle(),
                 translationManager.ProblemForbidden(),
