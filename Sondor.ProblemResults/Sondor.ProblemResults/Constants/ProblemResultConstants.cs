@@ -44,32 +44,32 @@ public class ProblemResultConstants
     /// <summary>
     /// The error code extension key.
     /// </summary>
-    public const string ErrorCode = "error-code";
+    public const string ErrorCode = "errorCode";
     
     /// <summary>
     /// The error message.
     /// </summary>
-    public const string ErrorMessage = "error-message";
+    public const string ErrorMessage = "errorMessage";
 
     /// <summary>
     /// The property name extension key.
     /// </summary>
-    public const string PropertyName = "property-name";
+    public const string PropertyName = "propertyName";
 
     /// <summary>
     /// The property value extension key.
     /// </summary>
-    public const string PropertyValue = "property-value";
+    public const string PropertyValue = "propertyValue";
 
     /// <summary>
     /// The new resource extension key.
     /// </summary>
-    public const string NewResource = "new-resource";
+    public const string NewResource = "newResource";
 
     /// <summary>
     /// The updated resource extension key.
     /// </summary>
-    public const string UpdatedResource = "updated-resource";
+    public const string UpdatedResource = "updatedResource";
 
     /// <summary>
     /// Find problem type by error code.
